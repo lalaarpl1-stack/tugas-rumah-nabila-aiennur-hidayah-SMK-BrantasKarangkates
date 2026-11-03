@@ -1,4 +1,4 @@
-/* Gaya portofolio Andi Pratama
+/* Gaya portofolio Nabila aiennur hidayah/lalaa
    Palet: #1D3557 (utama), #E63946 (aksen), #F1FAEE (latar)
    Huruf: Poppins (judul), Inter (isi)
    Tata letak: mobile first, titik ubah 768px (tablet) dan 1024px (laptop) */
@@ -261,4 +261,164 @@ footer a {
   .hero h2 {
     font-size: 2.75rem;
   }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    font-size: 14px;
+}
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eff8ee;
+    color: #222;
+}
+
+
+/* Navbar */
+header {
+    background-color: #1e3557;
+    color: white;
+    width: 100%;
+    padding: 20px 30px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0;
+    transform: translateX(-90PX);
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 30px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+/* Memperbaiki lebar halaman */
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    max-width: 100%;
+}
+/* Bagian utama */
+main {
+    min-height: 500px;
+    padding: 30px 40px;
+}
+
+/* Kotak kalkulator */
+.card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.card h2 {
+    color: #1e3557;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 440px;
+    max-width: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c92a37;
+}
+
+#hasil {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    background-color: #1e3557;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 16px;
+}
+
+footer p {
+    margin-bottom: 15px;
 }
