@@ -5,79 +5,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Nilai</title>
+    <link rel="icon" href="img/IMG20250812063908.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=poppins:wght@600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/Tema.js" defer></script>
+    <script src="js/latihan.js" defer></script>
 </head>
 
 <body>
+    <header>
 
-    <div class="browser">
+        <div class="container navbar">
+            <h1>Nabila aiennur hidayah/lalaa</h1>
+            <nav class="menu-laptop">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="proyek.html">Proyek</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                </ul>
+            </nav>
 
-        <div class="browser-header">
-            <div class="dots">
-                <span class="red"></span>
-                <span class="yellow"></span>
-                <span class="green"></span>
+        <button type="button" id="button-tema" class="tombol-tema">
+            🌙Mode Gelap
+        </button>
+        
+            <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
+        <details class="menu-ponsel">
+            <summary>Menu</summary>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="proyek.html">Proyek</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                    <li><a href="kalkulator.html">Kalkulator</a></li>
+                </ul>
+            </nav>
+        </details>
+      </div>
+    </header>
+
+    <main>
+        <div class="card">
+
+            <h2>Kalkulator Nilai</h2>
+
+            <p>
+                Masukkan nilai tugas, UTS, dan UAS, lalu tekan tombol Hitung.
+            </p>
+
+            <form id="formNilai">
+
+                <label for="tugas">Nilai tugas</label>
+                <input type="number" id="tugas" required>
+
+                <label for="uts">Nilai UTS</label>
+                <input type="number" id="uts" required>
+
+                <label for="uas">Nilai UAS</label>
+                <input type="number" id="uas" required>
+
+                <button type="submit">Hitung</button>
+
+            </form>
+
+            <div id="hasil">
+                Rata-rata 84.0, predikat B
             </div>
 
         </div>
+    </main>
 
-        <header>
-            <h3>nabila aiennur hidayah</h3>
+    <footer>
+        <p>
+            Kontak: lala.rpl1@gmail.com |
+            GitHub | YouTube
+        </p>
 
-            <div class="container navbar">
-                <h1>Nabila aiennur hidayah/lalaa</h1>
-                <nav class="menu-laptop">
-                    <ul>
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="proyek.html">Proyek</a></li>
-                        <li><a href="kontak.html">Kontak</a></li>
-                        <li><a href="kalkulator.html">Kalkulator</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-
-        <main>
-            <div class="card">
-
-                <h2>Kalkulator Nilai</h2>
-
-                <p>
-                    Masukkan nilai tugas, UTS, dan UAS, lalu tekan tombol Hitung.
-                </p>
-
-                <form id="formNilai">
-
-                    <label for="tugas">Nilai tugas</label>
-                    <input type="number" id="tugas" required>
-
-                    <label for="uts">Nilai UTS</label>
-                    <input type="number" id="uts" required>
-
-                    <label for="uas">Nilai UAS</label>
-                    <input type="number" id="uas" required>
-
-                    <button type="submit">Hitung</button>
-
-                </form>
-
-                <div id="hasil">
-                    Rata-rata 84.0, predikat B
-                </div>
-
-            </div>
-        </main>
-
-        <footer>
-            <p>
-                Kontak: lala.rpl1@gmail.com |
-                GitHub | YouTube
-            </p>
-
-            <p>
-                © 2026 nabila aiennur hidayah. Dibuat dengan semangat sambil belajar di Kelas Industri UBIG.
-            </p>
-        </footer>
+        <p>
+            © 2026 nabila aiennur hidayah. Dibuat dengan semangat sambil belajar di Kelas Industri UBIG.
+        </p>
+    </footer>
 
     </div>
 
