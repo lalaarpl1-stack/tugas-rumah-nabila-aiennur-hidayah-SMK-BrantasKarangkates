@@ -1,4 +1,4 @@
-// JavaScript untuk portofolio Nabila aiennur hidayah.
+// JavaScript untuk portofolio Nabila aiennur hidayah/lalaa.
 const skills = [
 	{ nama: "HTML", level: "Menengah" },
 	{ nama: "CSS", level: "Menengah" },
@@ -33,7 +33,7 @@ const proyek = [
 		judul: "Halaman Profil Pertama",
 		kategori: "HTML",
 		gambar: "img/foto halaman profil.jpeg",
-		alt: "Tangkapan layar halaman profil Nabila aiennur hidayah",
+		alt: "Tangkapan layar halaman profil Nabila aiennur hidayah/lalaa",
 		deskripsi: "Halaman web pertama saya, berisi profil, hobi, cita-cita, keahlian, dan kontak.",
 	},
 	{
@@ -60,7 +60,7 @@ const proyek = [
 	{
 		judul: "Hasil Console JavaScript",
 		kategori: "JavaScript",
-		gambar: "img/lima-soal-logika.jpg.jpeg",
+		gambar: "img/Lima-soal-logika.jpg.jpeg",
 		alt: "Tangkapan layar hasil JavaScript di console",
 		deskripsi: "Hasil dari latihan JavaScript yang ditampilkan di console.",
 	},
@@ -138,7 +138,6 @@ if (kontakPesan && kontakHitung) {
 		kontakHitung.textContent = `${kontakPesan.value.length}/300 karakter`;
 	});
 }
-
 // 5. Repositori GiHub terbaru (halaman Proyek)
 const username = "lalaarpl1-stack"; 
 const alamatRepo = `https://api.github.com/users/lalaarpl1-stack/repos`;

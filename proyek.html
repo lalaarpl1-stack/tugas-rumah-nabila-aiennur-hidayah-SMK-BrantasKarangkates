@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nabila aiennur hidayah/lalaa | Proyek</title>
-  <link rel="icon" href="img/IMG20250812063908.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
-  <script src="js/Tema.js" defer></script>
+  <script src="js/tema.js" defer></script>
 </head>
-
 <body>
   <header>
     <div class="container navbar">
@@ -24,12 +20,9 @@
           <li><a href="index.html">Beranda</a></li>
           <li><a href="proyek.html">Proyek</a></li>
           <li><a href="kontak.html">Kontak</a></li>
-          <li><a href="kalkulator.html">Kalkulator</a></li>
+          <li><a href="kalkulator.html">Kalkulator Nilai</a></li>
         </ul>
       </nav>
-      <button type="button" id="tombol-tema" class="tombol-tema">
-        🌙Mode Gelap
-      </button>
       <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
       <details class="menu-ponsel">
         <summary>Menu</summary>
@@ -42,6 +35,7 @@
           </ul>
         </nav>
       </details>
+      <button type="button" class="tombol-tema" id="btn-tema">🌙 Mode Gelap</button>
     </div>
   </header>
 
@@ -51,14 +45,11 @@
         <h2>Proyek Saya</h2>
         <p>Kumpulan hasil belajar saya di Kelas Industri UBIG.</p>
 
-        <div class="filter-proyek" role="group" aria-label="filter proyek berdasarkan kategori">
-          <button type="button" class="filter-proyek-tombol aktif" data-filter-proyek="semua"
-            aria-pressed="true">semua</button>
-          <button type="button" class="filter-proyek-tombol" data-filter-proyek="HTML"
-            aria-pressed="false">HTML</button>
+        <div class="filter-proyek" role="group" aria-label="Filter proyek berdasarkan kategori">
+          <button type="button" class="filter-proyek-tombol aktif" data-filter-proyek="semua" aria-pressed="true">Semua</button>
+          <button type="button" class="filter-proyek-tombol" data-filter-proyek="HTML" aria-pressed="false">HTML</button>
           <button type="button" class="filter-proyek-tombol" data-filter-proyek="CSS" aria-pressed="false">CSS</button>
-          <button type="button" class="filter-proyek-tombol" data-filter-proyek="JavaScript"
-            aria-pressed="false">JavaScript</button>
+          <button type="button" class="filter-proyek-tombol" data-filter-proyek="JavaScript" aria-pressed="false">JavaScript</button>
         </div>
         <p id="jumlah-proyek" aria-live="polite"></p>
         <div class="daftar-kartu" id="daftar-proyek"></div>
@@ -70,14 +61,13 @@
         <p id="status-repo"></p>
         <ul id="daftar-repo"></ul>
       </section>
-      
+
       <!-- FAQ dengan details dan summary -->
       <section class="kartu">
         <h2>Pertanyaan yang Sering Diajukan</h2>
         <details>
           <summary>Bahasa apa yang dipakai untuk membuat proyek ini?</summary>
-          <p>Semua proyek di halaman ini dibuat dengan HTML. Tampilannya akan saya rapikan dengan CSS mulai Minggu 03.
-          </p>
+          <p>Semua proyek di halaman ini dibuat dengan HTML. Tampilannya akan saya rapikan dengan CSS mulai Minggu 03.</p>
         </details>
         <details>
           <summary>Apakah saya menerima pesanan pembuatan website?</summary>
@@ -87,13 +77,12 @@
     </div>
   </main>
 
-  <footer>
-    <p>Kontak: <a href="mailto:lalaa.rpl1@gmail.com">lalaa.rpl1@gmail.com</a> |
-      <a href="https://github.com/" target="_blank">GitHub</a> |
-      <a href="https://www.youtube.com/" target="_blank">YouTube</a>
-    </p>
-    <p>&copy; 2026 Lalaa.rpl1@gmail. Dibuat di Kelas Industri UBIG.</p>
+  
+ <footer>
+    <p>Kontak: <a href="mailto:lalaa.rpl1@gmail.com" target="_blank">lalaa.rpl1@gmail.com</a> |
+      <a href="https://github.com/lalaarpl1-stack" target="_blank">GitHub</a> |
+      <a href="https://www.youtube.com/@" target="_blank">YouTube</a></p>
+    <p>&copy; 2026 Nabila aiennur hidayah/lalaa. Dibuat di Kelas Industri UBIG.</p>
   </footer>
 </body>
-
 </html>
