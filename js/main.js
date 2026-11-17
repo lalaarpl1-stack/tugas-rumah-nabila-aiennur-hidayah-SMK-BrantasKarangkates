@@ -138,3 +138,108 @@ if (kontakPesan && kontakHitung) {
 		kontakHitung.textContent = `${kontakPesan.value.length}/300 karakter`;
 	});
 }
+
+// 5. Repositori GiHub terbaru (halaman Proyek)
+const username = "lalaarpl1-stack"; 
+const alamatRepo = `https://api.github.com/users/lalaarpl1-stack/repos`;
+const pilihan ="?sort=updated&per_page=6";
+const daftarRepo = document.querySelector("#daftar-repo");
+const statusRepo = document.querySelector("#status-repo");
+
+async function ambilRepositori() {
+	const ressponse = await fetch(alamatRepo + pilihan);
+	const repos = await ressponse.json();
+}
+if (daftarRepo) {
+	ambilRepositori();
+}
+async function ambilRepositori() {
+	try {
+		const response = await fetch(alamatRepo + pilihan);
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		const repos = await response.json();
+		const enamRepoTerbaru = repos
+			.sort((a, b) => b.updated_at.localeCompare(a.updated_at))
+			.slice(0, 6);
+
+		daftarRepo.replaceChildren();
+		enamRepoTerbaru.forEach((repo) => {
+			const item = document.createElement("li");
+			const tautan = document.createElement("a");
+			tautan.href = repo.html_url;
+			tautan.target = "_blank";
+			tautan.rel = "noopener noreferrer"; 
+			tautan.textContent = repo.name;
+			item.appendChild(tautan);
+			item.append(
+				` (${repo.language || "tanpa bahasa"}, ${repo.stargazers_count} bintang)`
+			);
+			daftarRepo.appendChild(item);
+		});
+		statusRepo.textContent = `${enamRepoTerbaru.length} repository terbaru:`;
+	} catch (error) {
+		statusRepo.textContent = "Maaf, daftar repository gagal dimuat. Periksa username atau coba lagi.";
+		console.error("Error:", error);
+	}
+}
+
+if (statusRepo) {
+	statusRepo.textContent = "Memuat repositori...";
+	ambilRepositori();
+}
+async function ambilRepo() {
+    statusRepo.textContent = "Memuat...";
+
+    try {
+		const response = await fetch(alamatRepo + pilihan);
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		const repos = await response.json();
+
+		repos.forEach((repo) => {
+			const item = document.createElement("li");
+			const tautan = document.createElement("a");
+			tautan.href = repo.html_url;
+            tautan.target = "_blank";
+			tautan.textContent = repo.name;
+			item.appendChild(tautan);
+			daftarRepo.appendChild(item);
+		});
+		statusRepo.textContent = `${repos.length} repository yang terakhir diperbarui:` ;
+	}
+	catch (error) {
+		statusRepo.textContent = "Maaf, daftar repository gagal memuat.Periksa username atau coba lagi.";
+		console.error(error);
+	}
+}
+
+// 1. Daftar keahlian (halaman Beranda), data dari data/keahlian.json
+const daftarskill = document.querySelector("#daftar-skill");
+const jumlahskill = document.querySelector("#jumlah-skill");
+
+async function ambilKeahlian() {
+	try {
+		const response = await fetch("data/keahlian.json");
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		const keahlian = await response.json();
+
+		keahlian.forEach((skill) => {
+			const item = document.createElement("li");
+			item.textContent = `${skill.nama} (${skill.level})`;
+			daftarskill.appendChild(item);
+		});
+
+		jumlahskill.textContent = `Ada ${keahlian.length} keahlian yang sedang saya kembangkan.`;
+	} catch (error) {
+		jumlahskill.textContent = "Gagal memuat daftar keahlian.";
+		console.error(error);
+	}
+}
+if (jumlahskill) {
+	ambilKeahlian();
+}
