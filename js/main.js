@@ -136,8 +136,11 @@ if (kontakPesan && kontakHitung) {
 
 	kontakPesan.addEventListener("input", () => {
 		kontakHitung.textContent = `${kontakPesan.value.length}/300 karakter`;
+		
 	});
 }
+
+
 // 5. Repositori GiHub terbaru (halaman Proyek)
 const username = "lalaarpl1-stack"; 
 const alamatRepo = `https://api.github.com/users/lalaarpl1-stack/repos`;

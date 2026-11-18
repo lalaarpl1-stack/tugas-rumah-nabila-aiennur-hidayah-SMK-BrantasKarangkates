@@ -701,6 +701,21 @@ footer a {
   font-weight: 600;
 }
 
+.hampir-penuh {
+  background-color: var(--warna-aksen);
+}
+
+.filter-proyek-tombol.kosongkan {
+  background-color: var(--warna-utama);
+}
+
+.tombol-kosongkan-pesan {
+  padding: 0.5rem 0.9rem;
+  border: 2px solid #24364B;
+  background-color: transparent;
+  font-size: 0.9rem;
+}
+
 /* 11. Tema gelap */
 body.gelap {
   --warna-utama: #24364B;
