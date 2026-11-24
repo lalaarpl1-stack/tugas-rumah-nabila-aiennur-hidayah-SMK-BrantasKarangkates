@@ -130,16 +130,24 @@ if (daftarProyek && jumlahProyek) {
 // 3. Penghitung karakter pesan (halaman kontak)
 const kontakPesan = document.querySelector("#pesan");
 const kontakHitung = document.querySelector("#hitung-karakter");
+const tombolKosongkan = document.querySelector("#kosongkan-pesan");
 
 if (kontakPesan && kontakHitung) {
-	kontakHitung.textContent = `${kontakPesan.value.length}/300 karakter`;
+    kontakHitung.textContent = `${kontakPesan.value.length}/300 karakter`;
 
-	kontakPesan.addEventListener("input", () => {
-		kontakHitung.textContent = `${kontakPesan.value.length}/300 karakter`;
-		
-	});
+    // Menghitung karakter saat mengetik
+    kontakPesan.addEventListener("input", () => {
+        kontakHitung.textContent = `${kontakPesan.value.length}/300 karakter`;
+    });
+
+    // Menghapus pesan dan mengatur hitungan menjadi 0
+    if (tombolKosongkan) {
+        tombolKosongkan.addEventListener("click", () => {
+            kontakPesan.value = "";
+            kontakHitung.textContent = "0/300 karakter";
+        });
+    }
 }
-
 
 // 5. Repositori GiHub terbaru (halaman Proyek)
 const username = "lalaarpl1-stack"; 
@@ -245,3 +253,4 @@ async function ambilKeahlian() {
 if (jumlahskill) {
 	ambilKeahlian();
 }
+
